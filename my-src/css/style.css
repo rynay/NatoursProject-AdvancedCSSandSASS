@@ -70,7 +70,7 @@ body {
 }
 
 .header__contant-container > * + * {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .header__title {
