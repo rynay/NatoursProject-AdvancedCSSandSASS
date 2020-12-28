@@ -84,10 +84,48 @@ body {
     font-size: 3.75rem;
     letter-spacing: 2rem;
     font-weight: 400;
+
+    animation-name: leftRideIn;
+    animation-delay: 0.2s;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
 }
 
 .header__title-sub {
     display: block;
     font-size: 1.25rem;
     letter-spacing: 1rem;
+
+    animation-name: rightRideIn;
+    animation-delay: 0.2s;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+}
+
+@keyframes leftRideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    30% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightRideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    30% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
