@@ -5,6 +5,8 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+main text color: #777;
+
 */
 
 :root {
@@ -63,6 +65,8 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    text-align: center;
 }
 
 .header__contant-container > * + * {
@@ -73,6 +77,8 @@ body {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+
+    backface-visibility: hidden;      /* Fix for shaking animation trouble */
 }
 
 .header__title > * + * {
@@ -128,4 +134,29 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.2em 2.4em;
+    border-radius: 100px;
+    transition: transform 0.2s,
+                box-shadow 0.2s;
+}
+
+.btn--white {
+    background: #fff;
+    color: #777;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
