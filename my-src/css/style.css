@@ -7,3 +7,87 @@ Dark green: #28b485
 
 */
 
+:root {
+    font-size: 1rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 1.875rem;
+}
+
+.header {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+
+    min-height: 95vh;
+    background: linear-gradient(
+        to right bottom, 
+        #7ed56fcc, 
+        #28b485ce),
+        url('../img/hero.jpg') top / cover no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    position: relative;
+}
+
+.header__logo-container {
+    height: 4.25rem;
+    width: 4.25rem;
+
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+.header__contant-container {
+    width: 90%;
+    max-width: 40rem;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__contant-container > * + * {
+    margin-top: 5em;
+}
+
+.header__title {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header__title > * + * {
+    margin-top: 1em;
+}
+
+.header__title-main {
+    display: block;
+    font-size: 3.75rem;
+    letter-spacing: 2rem;
+    font-weight: 400;
+}
+
+.header__title-sub {
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 1rem;
+}
