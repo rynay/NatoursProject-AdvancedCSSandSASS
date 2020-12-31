@@ -1,4 +1,4 @@
-.tours {
+.features {
     background: linear-gradient(
         to right bottom, 
         rgba($light-green, 0.8), 
@@ -9,7 +9,7 @@
         max-width: 100%;
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-gap: 3.5rem;
     }
