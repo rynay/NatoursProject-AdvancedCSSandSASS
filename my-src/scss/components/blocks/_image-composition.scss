@@ -20,8 +20,8 @@
         &:hover {
             transform: scale(1.05) translateY(-0.5rem);
             z-index: 1;
-            outline: 1rem solid $medium-green;
-            outline-offset: 1.25rem;
+            outline: 0.75rem solid $medium-green;
+            outline-offset: 1rem;
             box-shadow: 20px 40px 20px rgba($black, 0.35);
         }
 

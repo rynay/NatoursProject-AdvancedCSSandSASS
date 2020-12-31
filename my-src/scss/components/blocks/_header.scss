@@ -7,7 +7,6 @@
         rgba($light-green, 0.8), 
         rgba($dark-green, 0.8)),
         url('../img/hero.jpg') top / cover no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     position: relative;
 

@@ -132,6 +132,8 @@ body {
 
 .header {
   min-height: 95vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .about {
@@ -147,8 +149,6 @@ body {
   background: -webkit-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top/cover no-repeat;
   background: -o-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top/cover no-repeat;
   background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top/cover no-repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
 
@@ -417,8 +417,8 @@ body {
       -ms-transform: scale(1.05) translateY(-0.5rem);
           transform: scale(1.05) translateY(-0.5rem);
   z-index: 1;
-  outline: 1rem solid #55c57a;
-  outline-offset: 1.25rem;
+  outline: 0.75rem solid #55c57a;
+  outline-offset: 1rem;
   -webkit-box-shadow: 20px 40px 20px rgba(0, 0, 0, 0.35);
           box-shadow: 20px 40px 20px rgba(0, 0, 0, 0.35);
 }

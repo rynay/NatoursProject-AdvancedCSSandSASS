@@ -11,6 +11,7 @@ body {
 
 .header {
     min-height: 95vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .about {
@@ -18,3 +19,4 @@ body {
     padding-top: 35vh;
     padding-bottom: 35vh;
 }
+
