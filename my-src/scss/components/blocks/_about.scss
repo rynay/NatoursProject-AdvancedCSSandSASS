@@ -1,10 +1,9 @@
 .about {
-    background: #f7f7f7;
-
+    background: $light-background;
     &__content-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-gap: 3.75rem;
+        grid-gap: 3.75rem;        
     }
 }

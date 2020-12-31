@@ -1,0 +1,21 @@
+.text {
+    font-family: "Lato", sans-serif;
+    &__title {
+        font-weight: 700;
+        color: $main-dark;
+        text-transform: uppercase;
+        font-size: 1rem;
+        line-height: 1;
+
+        margin-bottom: 1em;
+    }
+    &__paragraph {
+        color: $main-dark;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+    }
+}
