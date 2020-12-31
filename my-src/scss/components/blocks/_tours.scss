@@ -1,0 +1,47 @@
+.tours {
+    background: linear-gradient(
+        to right bottom, 
+        rgba($light-green, 0.8), 
+        rgba($dark-green, 0.8)),
+        url('../img/nat-4.jpg') top / cover no-repeat;
+    
+    &__container {
+        max-width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 3.5rem;
+    }
+
+    &__card {
+        padding: 1.6em;
+        background: rgba($main-light, 0.8);
+        border-radius: 3px;
+        box-shadow: 0 10px 10px rgba($black, 0.15);
+
+        text-align: center;
+        font-size: 0.9rem;
+
+        transition: all 0.3s;
+
+        &:hover {
+            transform: translateY(-5%) scale(1.05);
+            box-shadow: 0 10px 25px rgba($black, 0.10);
+        }
+    }
+
+    &__icon-container {
+        padding: 0.5em 0.5em 2em;
+    }
+
+    &__icon {
+        padding: 1em;
+
+        background: linear-gradient(to right, $light-green, $dark-green);
+        background-clip: text;
+        color: transparent;
+        font-size: 3.75rem;
+        line-height: 1.2;
+    }
+}

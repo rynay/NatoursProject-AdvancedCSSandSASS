@@ -132,14 +132,20 @@ body {
 
 .header {
   min-height: 95vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 .about {
   margin-top: -20vh;
-  padding-top: 35vh;
-  padding-bottom: 35vh;
+  padding: 35vh 0;
+}
+
+.tours {
+  margin-top: -30vh;
+  padding: 40vh 0;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
 
 .header {
@@ -445,6 +451,63 @@ body {
      object-fit: cover;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.tours {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/nat-4.jpg") top/cover no-repeat;
+  background: -webkit-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg") top/cover no-repeat;
+  background: -o-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg") top/cover no-repeat;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg") top/cover no-repeat;
+}
+
+.tours__container {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 3.5rem;
+}
+
+.tours__card {
+  padding: 1.6em;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.tours__card:hover {
+  -webkit-transform: translateY(-5%) scale(1.05);
+      -ms-transform: translateY(-5%) scale(1.05);
+          transform: translateY(-5%) scale(1.05);
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tours__icon-container {
+  padding: 0.5em 0.5em 2em;
+}
+
+.tours__icon {
+  padding: 1em;
+  background: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background: -webkit-linear-gradient(left, #7ed56f, #28b485);
+  background: -o-linear-gradient(left, #7ed56f, #28b485);
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 3.75rem;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 1000px) {

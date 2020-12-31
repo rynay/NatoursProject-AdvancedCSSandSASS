@@ -11,12 +11,16 @@ body {
 
 .header {
     min-height: 95vh;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 .about {
     margin-top: -20vh;
-    padding-top: 35vh;
-    padding-bottom: 35vh;
+    padding: 35vh 0;
 }
 
+.tours {
+    margin-top: -30vh;
+    padding: 40vh 0;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
