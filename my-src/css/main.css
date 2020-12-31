@@ -88,6 +88,10 @@
   }
 }
 
+.u-text-center {
+  text-align: center;
+}
+
 :root {
   font-size: 100%;
 }
@@ -114,10 +118,25 @@ body {
   padding: 1.875rem;
 }
 
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 95vh;
+}
+
+.about {
+  margin-top: -20vh;
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+}
+
 .header {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  min-height: 95vh;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg") top/cover no-repeat;
   background: -webkit-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top/cover no-repeat;
   background: -o-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top/cover no-repeat;
@@ -151,7 +170,18 @@ body {
   margin-top: 3em;
 }
 
-.header__title {
+.header__btn {
+  -webkit-animation-name: BottomRideIn;
+          animation-name: BottomRideIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.general-title {
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -160,11 +190,11 @@ body {
   /* Fix for shaking animation trouble */
 }
 
-.header__title > * + * {
+.general-title > * + * {
   margin-top: 1em;
 }
 
-.header__title-main {
+.general-title__main {
   display: block;
   font-size: 3.75rem;
   letter-spacing: 2rem;
@@ -179,7 +209,7 @@ body {
           animation-timing-function: ease;
 }
 
-.header__title-sub {
+.general-title__sub {
   display: block;
   font-size: 1.25rem;
   letter-spacing: 1rem;
@@ -191,17 +221,6 @@ body {
           animation-duration: 0.9s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-}
-
-.header__btn {
-  -webkit-animation-name: BottomRideIn;
-          animation-name: BottomRideIn;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
 }
 
 .btn--white {
@@ -218,7 +237,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.2em 2.4em;
-  border-radius: 100px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
   -webkit-transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   -o-transition: transform 0.2s, box-shadow 0.2s;
@@ -255,7 +275,8 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -265,4 +286,52 @@ body {
   -o-transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+
+.about {
+  background: #f7f7f7;
+}
+
+.about__content-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 3.75rem;
+}
+
+.title {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background: -webkit-linear-gradient(left, #7ed56f, #28b485);
+  background: -o-linear-gradient(left, #7ed56f, #28b485);
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 2.2rem;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.title:hover {
+  -webkit-transform: skewX(10deg) skewY(2deg) scale(1.2);
+      -ms-transform: skewX(10deg) skewY(2deg) scale(1.2);
+          transform: skewX(10deg) skewY(2deg) scale(1.2);
+  text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1000px) {
+  .about__content-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 }

@@ -2,3 +2,19 @@ body {
     margin: 0;
     padding: 1.875rem;
 }
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    min-height: 95vh;
+}
+
+.about {
+    margin-top: -20vh;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+}

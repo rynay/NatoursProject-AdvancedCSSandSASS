@@ -1,0 +1,34 @@
+.general-title {
+    color: $main-light;
+    text-transform: uppercase;
+    text-align: center;
+
+    backface-visibility: hidden;      /* Fix for shaking animation trouble */
+
+    & > * + * {
+        margin-top: 1em;
+    }
+    
+    &__main {
+        display: block;
+        font-size: 3.75rem;
+        letter-spacing: 2rem;
+        font-weight: 400;
+
+        animation-name: leftRideIn;
+        animation-delay: 0.2s;
+        animation-duration: 0.9s;
+        animation-timing-function: ease;
+    }
+
+    &__sub {
+        display: block;
+        font-size: 1.25rem;
+        letter-spacing: 1rem;
+
+        animation-name: rightRideIn;
+        animation-delay: 0.2s;
+        animation-duration: 0.9s;
+        animation-timing-function: ease;
+    }
+}
