@@ -12,10 +12,10 @@
     &__paragraph {
         color: $main-dark;
         font-size: 1rem;
-        line-height: 1.5;
+        line-height: 1.75;
 
         &:not(:last-child){
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
     }
 }
