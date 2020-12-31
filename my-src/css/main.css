@@ -357,6 +357,38 @@ body {
   text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
 }
 
+.learn-more-btn:link, .learn-more-btn:visited {
+  display: inline-block;
+  color: #55c57a;
+  text-decoration: none;
+  padding: 0.5em 0.25em;
+  border-bottom: 1px solid;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.learn-more-btn:hover {
+  border: 0;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  color: white;
+  background: #55c57a;
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.learn-more-btn:active {
+  color: white;
+  background: #55c57a;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
 @media screen and (max-width: 1000px) {
   .about__content-container {
     -ms-grid-columns: 1fr;

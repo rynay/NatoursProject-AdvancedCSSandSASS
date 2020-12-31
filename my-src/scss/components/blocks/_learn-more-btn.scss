@@ -1,0 +1,30 @@
+.learn-more-btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        color: $medium-green;
+        text-decoration: none;
+        padding: 0.5em 0.25em;
+        border-bottom: 1px solid;
+
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        border: 0;
+        box-shadow: 0 10px 15px rgba($black, 0.15);
+
+        color: $main-light;
+        background: $medium-green;
+
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        color: $main-light;
+        background: $medium-green;
+        box-shadow: 0 5px 10px rgba($black, 0.15);
+
+        transform: translateY(2px);
+    }
+}
