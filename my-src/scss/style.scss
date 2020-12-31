@@ -159,6 +159,9 @@ body {
     &--white {
         background: $main-light;
         color: $main-dark;
+        &::before {
+            background: $main-light;
+        }
     }
     &:link,
     &:visited {
@@ -175,6 +178,10 @@ body {
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 20px rgba($black, 0.2);
+        &::before {
+            transform: scale(1.4, 1.6);
+            opacity: 0;
+        }
     }
     &:active {
         transform: translateY(0);
@@ -186,7 +193,6 @@ body {
         height: 100%;
         width: 100%;
         border-radius: 100px;
-        background: $main-light;
     
         position: absolute;
         top: 0;
@@ -196,9 +202,4 @@ body {
         transition: transform 0.3s,
                     opacity 0.3s;
     }   
-    
-    &:hover::before {
-        transform: scale(1.4, 1.6);
-        opacity: 0;
-    }
 }
