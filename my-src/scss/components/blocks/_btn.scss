@@ -1,11 +1,6 @@
 .btn {
-    &--white {
-        background: $main-light;
-        color: $main-dark;
-        &::before {
-            background: $main-light;
-        }
-    }
+    font-family: "Lato", sans-serif;
+
     &:link,
     &:visited {
     display: inline-block;
@@ -18,6 +13,7 @@
 
     position: relative;
     }
+
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 20px rgba($black, 0.2);
@@ -45,4 +41,22 @@
         transition: transform 0.3s,
                     opacity 0.3s;
     }   
+
+    &--white {
+        background: $main-light;
+        color: $main-dark;
+        &::before {
+            background: $main-light;
+        }
+    }
+
+    &--green {
+        background: $medium-green;
+        color: $main-light;
+
+        &::before {
+            background: $medium-green;
+        }
+    }
+
 }

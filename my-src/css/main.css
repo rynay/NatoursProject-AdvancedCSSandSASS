@@ -150,7 +150,7 @@ body {
 
 .tours {
   margin-top: -15rem;
-  padding: 20rem 0;
+  padding: 20rem 0 10rem;
 }
 
 .header {
@@ -240,13 +240,8 @@ body {
           animation-timing-function: ease;
 }
 
-.btn--white {
-  background: white;
-  color: #777777;
-}
-
-.btn--white::before {
-  background: white;
+.btn {
+  font-family: "Lato", sans-serif;
 }
 
 .btn:link, .btn:visited {
@@ -303,6 +298,24 @@ body {
   -o-transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+
+.btn--white {
+  background: white;
+  color: #777777;
+}
+
+.btn--white::before {
+  background: white;
+}
+
+.btn--green {
+  background: #55c57a;
+  color: white;
+}
+
+.btn--green::before {
+  background: #55c57a;
 }
 
 .about {
@@ -527,6 +540,7 @@ body {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 3rem;
+  margin-bottom: 7rem;
 }
 
 .card {
