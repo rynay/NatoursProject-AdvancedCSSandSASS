@@ -1,0 +1,56 @@
+.card {
+    backface-visibility: hidden;
+    position: relative;
+    min-height: 30rem;
+
+    perspective: 100rem;
+
+    &:hover {
+        .card__side--front {
+            transform: rotateY(180deg);
+        }
+        .card__side--back {
+            transform: rotateY(0deg);
+        }
+    }
+
+    &__side {
+        &--front {
+            backface-visibility: hidden;
+            min-height: 30rem;
+            width: 100%;
+    
+            position: absolute;
+            top: 0;
+
+            background: $main-dark;
+
+            transition: all 1s;
+    
+        }
+    
+        &--back {
+            backface-visibility: hidden;
+            min-height: 30rem;
+            width: 100%;
+    
+            position: absolute;
+            top: 0;
+
+            transform: rotateY(180deg);
+
+            transition: all 1s;
+    
+            &-orange {
+                background: linear-gradient(to right bottom, $orange-light, $orange-dark);
+            }
+            &-green {
+                background: linear-gradient(to right bottom, $light-green, $dark-green);
+            }
+            &-blue {
+                background: linear-gradient(to right bottom, $blue-light, $blue-dark);
+            }
+        }
+    }
+
+}

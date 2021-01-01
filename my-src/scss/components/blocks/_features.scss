@@ -9,7 +9,7 @@
         max-width: 100%;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 15rem 15rem 15rem 15rem;
         grid-template-rows: auto;
         grid-gap: 3.5rem;
     }
@@ -32,7 +32,7 @@
     }
 
     &__icon-container {
-        padding: 0.5em 0.5em 2em;
+        padding: 1em 0.5em 2em;
     }
 
     &__icon {
