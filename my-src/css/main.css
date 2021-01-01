@@ -564,6 +564,7 @@ body {
 }
 
 .card__side--front {
+  overflow: hidden;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   min-height: 30rem;
