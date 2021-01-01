@@ -687,6 +687,34 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+.card__side--back {
+  color: white;
+}
+
+.card__pricing {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card__pricing-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.card__pricing-value {
+  font-weight: 200;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
 @media screen and (max-width: 1000px) {
   .about__content-container {
     -ms-grid-columns: 1fr;
