@@ -27,7 +27,7 @@
 
             background: $main-dark;
 
-            transition: all 1s;
+            transition: all 1s ease;
         }
     
         &--back {
@@ -42,7 +42,7 @@
 
             transform: rotateY(-180deg);
 
-            transition: all 1s;
+            transition: all 1s ease;
     
             &-orange {
                 background: linear-gradient(to right bottom, $orange-light, $orange-dark);
