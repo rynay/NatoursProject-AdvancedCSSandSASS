@@ -10,6 +10,8 @@
 
     perspective: 100rem;
 
+    overflow: hidden;
+
     &:hover {
         .card__side--front {
             transform: rotateY(180deg);
