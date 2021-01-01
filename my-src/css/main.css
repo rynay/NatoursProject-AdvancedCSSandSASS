@@ -530,6 +530,7 @@ body {
 }
 
 .card {
+  font-family: "Lato", sans-serif;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: relative;
@@ -557,9 +558,7 @@ body {
           border-radius: 3px;
   -webkit-box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  top: 0;
-  background: #777777;
+  background: white;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
@@ -568,7 +567,7 @@ body {
 .card__side--back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  min-height: 30rem;
+  min-height: 100%;
   width: 100%;
   -webkit-border-radius: 3px;
           border-radius: 3px;
@@ -602,6 +601,90 @@ body {
   background: -webkit-linear-gradient(left top, #2998ff, #5643fa);
   background: -o-linear-gradient(left top, #2998ff, #5643fa);
   background: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
+.card__picture {
+  height: 15rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card__title {
+  text-align: right;
+  font-weight: 300;
+  color: white;
+  font-size: 0;
+  text-transform: uppercase;
+  width: 70%;
+  position: relative;
+  top: -6rem;
+  right: -5rem;
+}
+
+.card__title-span {
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  margin-top: -0.25em;
+  position: relative;
+  font-size: 1.75rem;
+}
+
+.card__side--front-orange .card__picture {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.25)), to(rgba(255, 119, 48, 0.25))), url("../img/nat-5.jpg") center/cover no-repeat;
+  background: -webkit-linear-gradient(left top, rgba(255, 185, 0, 0.25), rgba(255, 119, 48, 0.25)), url("../img/nat-5.jpg") center/cover no-repeat;
+  background: -o-linear-gradient(left top, rgba(255, 185, 0, 0.25), rgba(255, 119, 48, 0.25)), url("../img/nat-5.jpg") center/cover no-repeat;
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.25), rgba(255, 119, 48, 0.25)), url("../img/nat-5.jpg") center/cover no-repeat;
+}
+
+.card__side--front-orange .card__title-span {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.8)), to(rgba(255, 119, 48, 0.8)));
+  background: -webkit-linear-gradient(left top, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+  background: -o-linear-gradient(left top, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+}
+
+.card__side--front-green .card__picture {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.25)), to(rgba(40, 180, 133, 0.25))), url("../img/nat-6.jpg") center/cover no-repeat;
+  background: -webkit-linear-gradient(left top, rgba(126, 213, 111, 0.25), rgba(40, 180, 133, 0.25)), url("../img/nat-6.jpg") center/cover no-repeat;
+  background: -o-linear-gradient(left top, rgba(126, 213, 111, 0.25), rgba(40, 180, 133, 0.25)), url("../img/nat-6.jpg") center/cover no-repeat;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.25), rgba(40, 180, 133, 0.25)), url("../img/nat-6.jpg") center/cover no-repeat;
+}
+
+.card__side--front-green .card__title-span {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8)));
+  background: -webkit-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  background: -o-linear-gradient(left top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+
+.card__side--front-blue .card__picture {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.25)), to(rgba(86, 67, 250, 0.25))), url("../img/nat-7.jpg") center/cover no-repeat;
+  background: -webkit-linear-gradient(left top, rgba(41, 152, 255, 0.25), rgba(86, 67, 250, 0.25)), url("../img/nat-7.jpg") center/cover no-repeat;
+  background: -o-linear-gradient(left top, rgba(41, 152, 255, 0.25), rgba(86, 67, 250, 0.25)), url("../img/nat-7.jpg") center/cover no-repeat;
+  background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.25), rgba(86, 67, 250, 0.25)), url("../img/nat-7.jpg") center/cover no-repeat;
+}
+
+.card__side--front-blue .card__title-span {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.8)), to(rgba(86, 67, 250, 0.8)));
+  background: -webkit-linear-gradient(left top, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+  background: -o-linear-gradient(left top, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+  background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+}
+
+.card__list {
+  margin-top: -5rem;
+  list-style: none;
+  text-align: center;
+  padding: 2em 4em;
+}
+
+.card__list-item {
+  padding: .85em 1em;
+  color: #777777;
+}
+
+.card__list-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 @media screen and (max-width: 1000px) {
