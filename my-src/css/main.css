@@ -553,6 +553,10 @@ body {
           backface-visibility: hidden;
   min-height: 30rem;
   width: 100%;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 0;
   background: #777777;
@@ -566,6 +570,10 @@ body {
           backface-visibility: hidden;
   min-height: 30rem;
   width: 100%;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 40px rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 0;
   -webkit-transform: rotateY(180deg);

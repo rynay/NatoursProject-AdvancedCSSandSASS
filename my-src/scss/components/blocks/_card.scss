@@ -19,6 +19,8 @@
             backface-visibility: hidden;
             min-height: 30rem;
             width: 100%;
+            border-radius: 3px;
+            box-shadow: 0 1rem 40px rgba($black, 0.15);
     
             position: absolute;
             top: 0;
@@ -26,13 +28,14 @@
             background: $main-dark;
 
             transition: all 1s;
-    
         }
     
         &--back {
             backface-visibility: hidden;
             min-height: 30rem;
             width: 100%;
+            border-radius: 3px;
+            box-shadow: 0 1rem 40px rgba($black, 0.15);
     
             position: absolute;
             top: 0;
