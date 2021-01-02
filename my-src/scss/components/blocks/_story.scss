@@ -1,0 +1,32 @@
+.story {
+    background: rgba($main-light, 0.25);
+    border-radius: 3px;
+    box-shadow: 3rem 3rem 10rem rgba($black, 0.15);
+    transform: skewX(-12deg);
+
+    max-width: 55rem;
+    padding: 4rem 4rem 4rem 6rem;
+
+    & > * {
+        transform: skewX(12deg);
+    }
+
+    &__img-container {
+        float: left;
+        height: 10rem;
+        width: 10rem;
+
+        transform: translateX(-2rem) skewX(12deg);
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+    }
+}

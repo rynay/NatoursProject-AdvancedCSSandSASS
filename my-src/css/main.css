@@ -730,6 +730,58 @@ body {
   margin-bottom: 1.5em;
 }
 
+.stories {
+  background: #f7f7f7;
+  padding: 10rem 0;
+}
+
+.stories__story-container {
+  margin: 0 auto;
+}
+
+.stories__story-container:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.story {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 3rem 3rem 10rem rgba(0, 0, 0, 0.15);
+          box-shadow: 3rem 3rem 10rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: skewX(-12deg);
+      -ms-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+  max-width: 55rem;
+  padding: 4rem 4rem 4rem 6rem;
+}
+
+.story > * {
+  -webkit-transform: skewX(12deg);
+      -ms-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.story__img-container {
+  float: left;
+  height: 10rem;
+  width: 10rem;
+  -webkit-transform: translateX(-2rem) skewX(12deg);
+      -ms-transform: translateX(-2rem) skewX(12deg);
+          transform: translateX(-2rem) skewX(12deg);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+}
+
+.story__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (max-width: 1000px) {
   .about__content-container {
     -ms-grid-columns: 1fr;

@@ -1,0 +1,12 @@
+.stories {
+    background: $light-background;
+    padding: 10rem 0;
+
+    &__story-container {
+        margin: 0 auto;
+    }
+
+    &__story-container:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+}
