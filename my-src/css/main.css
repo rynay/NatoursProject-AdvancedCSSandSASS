@@ -732,7 +732,8 @@ body {
 }
 
 .stories {
-  background: #f7f7f7;
+  background: rgba(255, 255, 255, 0.85);
+  position: relative;
   padding: 10rem 0;
 }
 
@@ -746,7 +747,7 @@ body {
 
 .story {
   font-family: "Lato", sans-serif;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.7);
   -webkit-border-radius: 3px;
           border-radius: 3px;
   -webkit-box-shadow: 3rem 3rem 10rem rgba(0, 0, 0, 0.15);
@@ -825,6 +826,22 @@ body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 1000px) {
