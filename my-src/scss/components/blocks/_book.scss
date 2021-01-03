@@ -1,0 +1,9 @@
+.book {
+    background: linear-gradient(105deg, 
+                                rgba($main-light, 0.9) 0,
+                                rgba($main-light, 0.9) 50%,
+                                transparent 50%),
+                url("../img/nat-10.jpg") center / cover;
+
+    padding: 5rem;
+}

@@ -1,6 +1,7 @@
 .btn {
     font-family: "Lato", sans-serif;
 
+    &,
     &:link,
     &:visited {
     display: inline-block;
@@ -12,9 +13,16 @@
                 box-shadow 0.2s;
 
     position: relative;
+
+    //button changes 
+
+    border: 0;
+    outline: none;
+
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: translateY(-2px);
         box-shadow: 0 10px 20px rgba($black, 0.2);
         &::before {
@@ -22,6 +30,11 @@
             opacity: 0;
         }
     }
+
+    &--green:focus {
+        background: $light-green;
+    }
+
     &:active {
         transform: translateY(0);
         box-shadow: 0 5px 10px rgba($black, 0.2);

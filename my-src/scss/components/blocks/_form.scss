@@ -1,0 +1,32 @@
+.form {
+
+    &__input{
+        display: block;
+        width: 40%;
+        padding: 0.75rem 1em;
+        border: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 3px;
+        box-shadow: none;
+
+        color: rgba($main-dark, 0.9);
+        font-family: inherit;
+        font-size: 1rem;
+        
+        transition: all 0.3s;
+
+        &:focus {
+            box-shadow: 0 1rem 2rem rgba($black, 0.15);
+            &:required:invalid{
+                border-bottom-color: $orange-dark;
+            }
+            &:required:valid {
+                border-bottom-color: $medium-green;
+            }
+        }
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+}

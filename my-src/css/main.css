@@ -92,8 +92,12 @@
   text-align: center;
 }
 
-.u-title-margin-bottom {
+.u-big-margin-bottom {
   margin-bottom: 6rem;
+}
+
+.u-medium-margin-bottom {
+  margin-bottom: 3rem;
 }
 
 :root {
@@ -151,6 +155,10 @@ body {
 .tours {
   margin-top: -15rem;
   padding: 20rem 0 10rem;
+}
+
+.booking {
+  padding: 10rem 0;
 }
 
 .header {
@@ -244,7 +252,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -257,9 +265,11 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
   position: relative;
+  border: 0;
+  outline: none;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -267,11 +277,15 @@ body {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover::before {
+.btn:hover::before, .btn:focus::before {
   -webkit-transform: scale(1.4, 1.6);
       -ms-transform: scale(1.4, 1.6);
           transform: scale(1.4, 1.6);
   opacity: 0;
+}
+
+.btn--green:focus {
+  background: #7ed56f;
 }
 
 .btn:active {
@@ -842,6 +856,52 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.booking {
+  font-family: "Lato", sans-serif;
+}
+
+.book {
+  background: -webkit-linear-gradient(345deg, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg") center/cover;
+  background: -o-linear-gradient(345deg, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg") center/cover;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg") center/cover;
+  padding: 5rem;
+}
+
+.form__input {
+  display: block;
+  width: 40%;
+  padding: 0.75rem 1em;
+  border: none;
+  border-bottom: 3px solid transparent;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: rgba(119, 119, 119, 0.9);
+  font-family: inherit;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.form__input:focus:required:invalid {
+  border-bottom-color: #ff7730;
+}
+
+.form__input:focus:required:valid {
+  border-bottom-color: #55c57a;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 1000px) {
