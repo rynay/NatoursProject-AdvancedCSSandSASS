@@ -1,0 +1,66 @@
+.footer {
+    font-family: "Lato", sans-serif;
+    background: $dark-grey;
+
+    &__logo-container {
+        display: inline-block;
+        width: 9rem;
+        height: 9rem;
+    }
+
+    &__logo {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__content-container {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 15rem;
+    }
+
+    &__navigation {
+        padding-top: 1.5rem;
+        border-top: 1px solid $main-dark;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        // padding: 0 0.65em;
+    }
+
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $light-background;
+
+        transition: all 0.3s;
+    }
+
+    &__link:hover {
+        background: $dark-grey;
+        box-shadow: 0 1em 1em rgba($black, 0.4);
+        transform: scale(1.3) rotate(5deg);
+        color: $medium-green;
+    }
+
+    &__copy {
+        padding-top: 1.5rem;
+        border-top: 1px solid $main-dark;
+
+        color: $light-background;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
