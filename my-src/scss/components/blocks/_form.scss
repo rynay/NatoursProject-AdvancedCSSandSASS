@@ -1,8 +1,12 @@
 .form {
 
+    &__group {
+        width: 40%;
+    }
+
     &__input{
         display: block;
-        width: 40%;
+        width: 100%;
         padding: 0.75rem 1em;
         border: none;
         border-bottom: 3px solid transparent;
@@ -32,9 +36,10 @@
 
     &__label {
         display: block;
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: $main-dark;
         font-weight: 700;
+        font-size: 0.8rem;
 
         padding: 0.5em 1.3em;
 
@@ -47,6 +52,6 @@
     }
 
     &__group:not(:last-child) {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.75rem;
     }
 }
