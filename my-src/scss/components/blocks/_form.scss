@@ -7,13 +7,17 @@
         border: none;
         border-bottom: 3px solid transparent;
         border-radius: 3px;
-        box-shadow: none;
+        // box-shadow: none;
 
-        color: rgba($main-dark, 0.9);
+        color: darken($main-dark, 15%);        
         font-family: inherit;
         font-size: 1rem;
-        
+
         transition: all 0.3s;
+
+        &::placeholder {
+            color: rgba($main-dark, 0.85);
+        }
 
         &:focus {
             box-shadow: 0 1rem 2rem rgba($black, 0.15);
@@ -24,6 +28,22 @@
                 border-bottom-color: $medium-green;
             }
         }
+    }
+
+    &__label {
+        display: block;
+        font-size: 0.8rem;
+        color: $main-dark;
+        font-weight: 700;
+
+        padding: 0.5em 1.3em;
+
+        transition: all 0.3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        transform: translateY(-2.35rem);
+        opacity: 0;
     }
 
     &__group:not(:last-child) {

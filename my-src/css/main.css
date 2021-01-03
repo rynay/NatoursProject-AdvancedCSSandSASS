@@ -877,14 +877,28 @@ body {
   border-bottom: 3px solid transparent;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: rgba(119, 119, 119, 0.9);
+  color: #515151;
   font-family: inherit;
   font-size: 1rem;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: rgba(119, 119, 119, 0.85);
+}
+
+.form__input:-ms-input-placeholder {
+  color: rgba(119, 119, 119, 0.85);
+}
+
+.form__input::-ms-input-placeholder {
+  color: rgba(119, 119, 119, 0.85);
+}
+
+.form__input::placeholder {
+  color: rgba(119, 119, 119, 0.85);
 }
 
 .form__input:focus {
@@ -898,6 +912,24 @@ body {
 
 .form__input:focus:required:valid {
   border-bottom-color: #55c57a;
+}
+
+.form__label {
+  display: block;
+  font-size: 0.8rem;
+  color: #777777;
+  font-weight: 700;
+  padding: 0.5em 1.3em;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  -webkit-transform: translateY(-2.35rem);
+      -ms-transform: translateY(-2.35rem);
+          transform: translateY(-2.35rem);
+  opacity: 0;
 }
 
 .form__group:not(:last-child) {
