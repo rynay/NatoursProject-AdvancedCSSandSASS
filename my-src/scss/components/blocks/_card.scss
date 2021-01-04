@@ -8,7 +8,8 @@
     position: relative;
     min-height: 30rem;
 
-    @include mediaQuery(tab-land){
+    @media screen and (max-width: 75em),
+                screen and (hover: none) {
         min-height: 40rem;
     }
 
@@ -53,8 +54,9 @@
 
             transform: rotateY(-180deg);
 
-            @include mediaQuery(tab-land){
-                min-height: 15rem;
+            @media screen and (max-width: 75em),
+                screen and (hover: none) {
+                min-height: 17.5rem;
                 position: relative;
                 transform: rotateY(0);
                 clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
@@ -162,7 +164,8 @@
 
         padding: 2em 4em;
 
-        @include mediaQuery(tab-land){
+        @media screen and (max-width: 75em),
+                screen and (hover: none) {
             padding: 1.5em 4em 3rem;
         }
     }
@@ -183,7 +186,8 @@
     &__side--back {
         color: $main-light;
 
-        @include mediaQuery(tab-land){
+        @media screen and (max-width: 75em),
+                screen and (hover: none) {
             margin-top: -3rem;
         }
     }
@@ -203,7 +207,8 @@
         text-align: center;
         margin-bottom: 1em;
 
-        @include mediaQuery(tab-land){
+        @media screen and (max-width: 75em),
+                screen and (hover: none) {
             padding-top: 2em;
         }
     }
@@ -215,7 +220,8 @@
 
         margin-bottom: 1.5em;
 
-        @include mediaQuery(tab-land){
+        @media screen and (max-width: 75em),
+                screen and (hover: none) {
             font-size: 3rem;
             font-weight: 400;
             margin-bottom: 0.5em;

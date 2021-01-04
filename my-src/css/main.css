@@ -893,7 +893,7 @@ body {
           perspective: 100rem;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card {
     min-height: 40rem;
   }
@@ -944,9 +944,9 @@ body {
   transition: all 1s ease;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card__side--back {
-    min-height: 15rem;
+    min-height: 17.5rem;
     position: relative;
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
@@ -1055,7 +1055,7 @@ body {
   padding: 2em 4em;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card__list {
     padding: 1.5em 4em 3rem;
   }
@@ -1074,7 +1074,7 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card__side--back {
     margin-top: -3rem;
   }
@@ -1097,7 +1097,7 @@ body {
   margin-bottom: 1em;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card__pricing-title {
     padding-top: 2em;
   }
@@ -1110,7 +1110,7 @@ body {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 75em), screen and (hover: none) {
   .card__pricing-value {
     font-size: 3rem;
     font-weight: 400;
