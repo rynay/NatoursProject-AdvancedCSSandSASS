@@ -1105,9 +1105,9 @@ body {
       -ms-transform: translate(110vh, -50%);
           transform: translate(110vh, -50%);
   z-index: 1;
-  -webkit-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.5s cubic-bezier(1, -0.67, 0, 1.77);
+  -o-transition: all 0.5s cubic-bezier(1, -0.67, 0, 1.77);
+  transition: all 0.5s cubic-bezier(1, -0.67, 0, 1.77);
 }
 
 .navigation__list {
@@ -1144,6 +1144,9 @@ body {
 .navigation__link:hover {
   color: #55c57a;
   background-position: 100%;
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
 }
 
 .navigation__button {
@@ -1161,11 +1164,11 @@ body {
   background: radial-gradient(circle, #7ed56f, #28b485);
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .navigation__checkbox-label {
@@ -1288,6 +1291,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 
 .popup__container {

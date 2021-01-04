@@ -13,7 +13,7 @@
         left: 50%;
         transform: translate(110vh, -50%);
         z-index: 1;
-        transition: all 0.2s ease-in;
+        transition: all 0.5s cubic-bezier(1,-0.67,0,1.77);
     }
 
     &__list {
@@ -55,6 +55,8 @@
     &__link:hover {
         color: $medium-green;
         background-position: 100%;
+
+        transform: translateX(1rem);
     }
 
     &__button {
@@ -69,7 +71,7 @@
         width: 3.5rem;
         background: radial-gradient(circle, $light-green, $dark-green);
         border-radius: 50%;
-        transition: transform 0.3s;        
+        transition: transform 0.5s ease;        
     }
 
     &__checkbox-label {
