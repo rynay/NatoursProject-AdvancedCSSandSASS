@@ -20,12 +20,12 @@
         position: relative;
     }
 
-    &__input:checked ~ &__label >  &__decoration::before {
+    &__decoration::before {
         content: "";
         display: block;
         height: 1rem;
         width: 1rem;
-        background: $medium-green;
+        background: rgba($medium-green, 0);
         border-radius: 50%;
 
         position: absolute;
@@ -33,6 +33,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         
+        transition: background-color 0.2s;
+    }
+
+    &__input:checked ~ &__label >  &__decoration::before {
+        background: rgba($medium-green, 1);
     }
 
     &__input {

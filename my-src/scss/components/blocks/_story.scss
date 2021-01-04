@@ -19,7 +19,10 @@
         width: 10rem;
 
         transform: translateX(-2rem) skewX(12deg);
-        clip-path: circle(50% at 50% 50%);
+
+        border-radius: 50%;
+        overflow: hidden;
+        // clip-path: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
     }
 

@@ -134,7 +134,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 75.5rem;
+  padding: 0 0.625rem;
   margin: 0 auto;
 }
 
@@ -478,7 +479,7 @@ body {
 
 .image-composition__img-container--2 {
   top: 0;
-  right: 0;
+  right: 2rem;
 }
 
 .image-composition__img-container--3 {
@@ -559,8 +560,8 @@ body {
 .tours__card-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 21.25rem 21.25rem 21.25rem;
-      grid-template-columns: 21.25rem 21.25rem 21.25rem;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 3rem;
@@ -654,10 +655,10 @@ body {
   color: white;
   font-size: 0;
   text-transform: uppercase;
-  width: 70%;
-  position: relative;
-  top: -6rem;
-  right: -5rem;
+  width: 15rem;
+  position: absolute;
+  top: 8rem;
+  right: 0;
 }
 
 .card__title-span {
@@ -666,6 +667,10 @@ body {
   margin-top: -0.25em;
   position: relative;
   font-size: 1.75rem;
+}
+
+.card__side--front {
+  position: relative;
 }
 
 .card__side--front-orange .card__picture {
@@ -711,7 +716,7 @@ body {
 }
 
 .card__list {
-  margin-top: -5rem;
+  margin-top: -1.5rem;
   list-style: none;
   text-align: center;
   padding: 2em 4em;
@@ -796,8 +801,9 @@ body {
   -webkit-transform: translateX(-2rem) skewX(12deg);
       -ms-transform: translateX(-2rem) skewX(12deg);
           transform: translateX(-2rem) skewX(12deg);
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden;
   -webkit-shape-outside: circle(50% at 50% 50%);
           shape-outside: circle(50% at 50% 50%);
 }
@@ -979,12 +985,12 @@ body {
   position: relative;
 }
 
-.radio__input:checked ~ .radio__label > .radio__decoration::before {
+.radio__decoration::before {
   content: "";
   display: block;
   height: 1rem;
   width: 1rem;
-  background: #55c57a;
+  background: rgba(85, 197, 122, 0);
   -webkit-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
@@ -993,6 +999,13 @@ body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.radio__input:checked ~ .radio__label > .radio__decoration::before {
+  background: #55c57a;
 }
 
 .radio__input {
@@ -1392,12 +1405,4 @@ body {
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-}
-
-@media screen and (max-width: 1000px) {
-  .about__content-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
 }

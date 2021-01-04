@@ -75,10 +75,10 @@
         font-size: 0;
         text-transform: uppercase;
 
-        width: 70%;
-        position: relative;
-        top: -6rem;
-        right: -5rem;
+        width: 15rem;
+        position: absolute;
+        top: 8rem;
+        right: 0;
     }
 
     &__title-span {
@@ -88,6 +88,10 @@
         position: relative;
 
         font-size: 1.75rem;
+    }
+
+    &__side--front {
+        position: relative;
     }
 
     &__side--front-orange {
@@ -134,7 +138,7 @@
     }
 
     &__list {
-        margin-top: -5rem;
+        margin-top: -1.5rem;
         list-style: none;
         text-align: center;
 
