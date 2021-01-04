@@ -876,10 +876,14 @@ body {
   margin-bottom: 7rem;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 75em) {
   .tours__card-container {
-    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    -ms-grid-columns: minmax(25rem, 0.5fr);
+        grid-template-columns: minmax(25rem, 0.5fr);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
