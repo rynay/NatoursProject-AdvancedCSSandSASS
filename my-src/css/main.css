@@ -886,14 +886,21 @@ body {
           perspective: 100rem;
 }
 
-.card:hover .card__side--front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+@media screen and (max-width: 75em) {
+  .card {
+    min-height: 40rem;
+  }
 }
 
-.card:hover .card__side--back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+@media screen and (min-width: 1201px) {
+  .card:hover .card__side--front {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .card:hover .card__side--back {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
 }
 
 .card__side--front {
@@ -915,7 +922,7 @@ body {
 .card__side--back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  min-height: 100%;
+  min-height: 30rem;
   width: 100%;
   -webkit-border-radius: 3px;
           border-radius: 3px;
@@ -928,6 +935,17 @@ body {
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+@media screen and (max-width: 75em) {
+  .card__side--back {
+    min-height: 15rem;
+    position: relative;
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .card__side--back-orange {
@@ -1030,6 +1048,12 @@ body {
   padding: 2em 4em;
 }
 
+@media screen and (max-width: 75em) {
+  .card__list {
+    padding: 1.5em 4em 3rem;
+  }
+}
+
 .card__list-item {
   padding: .85em 1em;
   color: #777777;
@@ -1041,6 +1065,12 @@ body {
 
 .card__side--back {
   color: white;
+}
+
+@media screen and (max-width: 75em) {
+  .card__side--back {
+    margin-top: -3rem;
+  }
 }
 
 .card__pricing {
@@ -1060,11 +1090,25 @@ body {
   margin-bottom: 1em;
 }
 
+@media screen and (max-width: 75em) {
+  .card__pricing-title {
+    padding-top: 2em;
+  }
+}
+
 .card__pricing-value {
   font-weight: 200;
   font-size: 4rem;
   text-align: center;
   margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 75em) {
+  .card__pricing-value {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
 }
 
 .stories {

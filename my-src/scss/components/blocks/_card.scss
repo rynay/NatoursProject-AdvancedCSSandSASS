@@ -8,14 +8,20 @@
     position: relative;
     min-height: 30rem;
 
+    @include mediaQuery(tab-land){
+        min-height: 40rem;
+    }
+
     perspective: 100rem;
 
-    &:hover {
-        .card__side--front {
-            transform: rotateY(180deg);
-        }
-        .card__side--back {
-            transform: rotateY(0deg);
+    @media screen and (min-width: 1201px) {
+        &:hover {
+            .card__side--front {
+                transform: rotateY(180deg);
+            }
+            .card__side--back {
+                transform: rotateY(0deg);
+            }
         }
     }
 
@@ -35,7 +41,9 @@
     
         &--back {
             backface-visibility: hidden;
-            min-height: 100%;
+            
+            min-height: 30rem;
+            
             width: 100%;
             border-radius: 3px;
             box-shadow: 0 1rem 40px rgba($black, 0.15);
@@ -44,6 +52,13 @@
             top: 0;
 
             transform: rotateY(-180deg);
+
+            @include mediaQuery(tab-land){
+                min-height: 15rem;
+                position: relative;
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+            }
 
             transition: all 1s ease;
     
@@ -79,6 +94,9 @@
         position: absolute;
         top: 8rem;
         right: 0;
+        // @include mediaQuery(tab-port) {
+        //     position: relative;
+        // }
     }
 
     &__title-span {
@@ -143,6 +161,10 @@
         text-align: center;
 
         padding: 2em 4em;
+
+        @include mediaQuery(tab-land){
+            padding: 1.5em 4em 3rem;
+        }
     }
 
     &__list-item {
@@ -160,6 +182,10 @@
 
     &__side--back {
         color: $main-light;
+
+        @include mediaQuery(tab-land){
+            margin-top: -3rem;
+        }
     }
 
     &__pricing {
@@ -176,6 +202,10 @@
         font-weight: 700;
         text-align: center;
         margin-bottom: 1em;
+
+        @include mediaQuery(tab-land){
+            padding-top: 2em;
+        }
     }
 
     &__pricing-value {
@@ -184,6 +214,12 @@
         text-align: center;
 
         margin-bottom: 1.5em;
+
+        @include mediaQuery(tab-land){
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 0.5em;
+        }
     }
 
     //=============================================================
