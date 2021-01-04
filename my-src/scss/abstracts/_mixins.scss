@@ -1,0 +1,30 @@
+// 0 - 600px:      Phone 
+// 601 - 900px:    Tablet Portrait
+// 901 - 1200px:   Tablet Landscape 
+// 1800px+ :       Big screens
+
+
+
+
+@mixin mediaQuery($breakpoint) {
+    @if $breakpoint == phone {
+        @media screen and (max-width: 37.5em){
+            @content
+        }
+    };
+    @if $breakpoint == tab-port {
+        @media screen and (max-width: 56.25em){
+            @content
+        }
+    };
+    @if $breakpoint == tab-land {
+        @media screen and (max-width: 75em){
+            @content
+        }
+    };
+    @if $breakpoint == big {
+        @media screen and (min-width: 112.5em){
+            @content
+        }
+    }
+}

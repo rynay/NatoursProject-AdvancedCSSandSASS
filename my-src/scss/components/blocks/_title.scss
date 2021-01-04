@@ -16,4 +16,16 @@
         transform: skewX(10deg) skewY(2deg) scale(1.2);
         text-shadow: 5px 5px 25px rgba($black, 0.3);
     }
+
+    @include mediaQuery(tab-land) {
+        font-size: 2rem;
+    }
+
+    @include mediaQuery(tab-port) {
+        font-size: 1.75rem;
+    }
+
+    @include mediaQuery(phone) {
+        font-size: 1.6rem;
+    }
 }

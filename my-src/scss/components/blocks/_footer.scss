@@ -19,6 +19,20 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         grid-gap: 15rem;
+
+        @include mediaQuery(tab-port) {
+            max-width: 70%;
+            margin: 5rem auto 0;
+            & {
+                grid-template-columns: 1fr;
+                grid-gap: 5rem;
+            }
+        }
+
+        @include mediaQuery(phone) {
+            max-width: 90%;
+            margin-top: 2rem;
+        }
     }
 
     &__navigation {
@@ -31,6 +45,10 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include mediaQuery(phone){
+            justify-content: center;
+        }
     }
 
     &__list-item {
@@ -40,6 +58,7 @@
     &__link:link,
     &__link:visited {
         display: inline-block;
+        padding: 0 0.5rem;
         font-size: 0.9rem;
         text-transform: uppercase;
         text-decoration: none;

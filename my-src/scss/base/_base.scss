@@ -1,5 +1,16 @@
 :root {
     font-size: 100%;
+
+    @include mediaQuery(tab-land) {
+        font-size: 90%;
+    }
+    @include mediaQuery(tab-port) {
+        font-size: 80%;
+    }
+
+    @include mediaQuery(phone) {
+        font-size: 70%;
+    }
 }
 
 html {

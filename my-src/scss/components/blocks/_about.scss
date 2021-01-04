@@ -2,8 +2,19 @@
     background: $light-background;
     &__content-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         grid-template-rows: auto;
-        grid-gap: 3.75rem;        
+        grid-gap: 3.75rem; 
+
+        position: relative;
+        
+        @include mediaQuery(tab-land){
+            & {
+
+                grid-template-columns: 1fr;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
     }
 }

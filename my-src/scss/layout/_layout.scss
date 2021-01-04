@@ -1,6 +1,12 @@
 body {
     margin: 0;
     padding: 1.875rem;
+
+    @include mediaQuery(tab-port) {
+        & {
+            padding: 0;
+        }
+    }
 }
 
 .container {
@@ -13,27 +19,92 @@ body {
 .header {
     min-height: 95vh;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    @include mediaQuery(tab-land) {
+        & {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        } 
+    }
 }
 
 .about {
     margin-top: -15rem;
     padding: 20rem 0;
+
+    @include mediaQuery(tab-land) {
+        & {
+            margin-top: -10rem;
+            padding: 15rem 0;
+        }
+    }
+    @include mediaQuery(phone) {
+        & {
+            margin-top: -7.5rem;
+            padding: 10rem 0;
+        }
+    }
 }
 
 .features {
     margin-top: -15rem;
     padding: 20rem 0;
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+
+    @include mediaQuery(tab-land) {
+        & {
+            margin-top: -12.5rem;
+            padding: 15rem 0;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+    }
+
+    @include mediaQuery(phone) {
+        & {
+            margin-top: -10rem;
+            padding: 10rem 0;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    }
 }
 
 .tours {
     margin-top: -15rem;
     padding: 20rem 0 10rem;
+
+    @include mediaQuery(tab-land) {
+        & {
+            margin-top: -13rem;
+            padding: 15rem 0 7.5rem;
+        }
+    }
 }
 
+.stories {
+    padding: 10rem 0;
+
+    @include mediaQuery(tab-land) {
+        padding: 7.5rem 0;
+    }
+    @include mediaQuery(phone) {
+        padding: 5rem 0;
+    }
+}
 
 .booking {
     padding: 10rem 0;
+
+    @include mediaQuery(tab-land) {
+        & {
+            padding: 7.5rem 0;
+        }
+    }
+    @include mediaQuery(phone) {
+        padding: 5rem 0;
+    }
 }
 
 .footer {

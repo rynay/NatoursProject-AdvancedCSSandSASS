@@ -1,14 +1,37 @@
 .image-composition {
+    max-width: 100%;
     position: relative;
     height: 0;
+    margin: 0 auto;
 
+    // @include mediaQuery(phone) {
+    //    & {
+    //         max-width: 70%;
+    //    }
+    // }
 
-    &:hover  &__img-container:not(:hover) {
-        transform:scale(0.95)
+    @media screen and (min-width: 1201px) {
+        &:hover  &__img-container--1:not(:hover) {
+            transform:scale(0.95) translate(-85%,-15%);
+            
+        }
+        &:hover  &__img-container--2:not(:hover) {
+            transform:scale(0.95) translate(-5%,-5%);
+           
+        }
+        &:hover  &__img-container--3:not(:hover) {
+            transform:scale(0.95) translate(-50%,45%);
+            
+        }
     }
+    
+
+    // @include mediaQuery(phone) {
+    //     padding: 3rem 3rem;
+    // }
 
     &__img-container {
-        width: 17.5rem;
+        width: 18rem;
         height: 12rem;
 
         position: absolute;
@@ -16,34 +39,152 @@
 
         transition: all 0.2s;
         z-index: 0;
-        
-        &:hover {
-            transform: scale(1.05) translateY(-0.5rem);
-            z-index: 1;
-            outline: 0.75rem solid $medium-green;
-            outline-offset: 1rem;
-            box-shadow: 20px 40px 20px rgba($black, 0.35);
+
+        @include mediaQuery(tab-land) {
+            & {
+                position: static;
+                max-width: 13rem;
+                height: auto;
+            }
         }
 
-        &--1 {
-            top: -2rem;
-            left: 0;
+        @include mediaQuery(tab-port) {
+            & {
+                max-width: 11rem;
+                height: auto;
+            }
         }
-        &--2 {
-            top: 0;
-            right: 2rem;
+
+        // @include mediaQuery(phone) {
+        //     & {
+        //         max-width: 10rem;
+        //         height: 1rem;
+        //     }
+        // }
+        
+        @media screen and (min-width: 1201px) {
+            &--1:hover {
+                transform: scale(1.05) translate(-85%,-15%);
+                z-index: 1;
+                outline: 0.75rem solid $medium-green;
+                outline-offset: 1rem;
+                box-shadow: 20px 40px 20px rgba($black, 0.35);
+            }
+            &--2:hover {
+                transform: scale(1.05) translate(-5%,-5%);
+                z-index: 1;
+                outline: 0.75rem solid $medium-green;
+                outline-offset: 1rem;
+                box-shadow: 20px 40px 20px rgba($black, 0.35);
+            }
+            &--3:hover {
+                transform: scale(1.05) translate(-50%,45%);
+                z-index: 1;
+                outline: 0.75rem solid $medium-green;
+                outline-offset: 1rem;
+                box-shadow: 20px 40px 20px rgba($black, 0.35);
+            }
         }
-        &--3 {
-            top: 6.5rem;
-            left: 20%;
+
+        @media screen and (min-width: 1201px) {
+            &--1 {
+                top: 50%;
+                left: 50%;
+    
+                transform: translate(-85%,-15%);
+            }
+            &--2 {
+                top: 50%;
+                left: 50%;
+    
+                transform: translate(-5%,-5%);
+            }
+            &--3 {
+                top: 50%;
+                left: 50%;
+    
+                transform: translate(-50%,45%);
+            }
+        }
+
+        @include mediaQuery(tab-land) {
+            &--1:hover {
+                position: static;
+                transform: none;
+                z-index: 0;
+                outline: none;
+                outline-offset: 0;
+                box-shadow: 10px 10px 20px rgba($black, 0.15);
+            }
+            &--2:hover {
+                position: static;
+                transform: scale(1.2) translateY(-0.25rem);
+                z-index: 1;
+                outline: none;
+                outline-offset: 0;
+                box-shadow: 10px 10px 20px rgba($black, 0.15);
+            }
+            &--3:hover {
+                position: static;
+                transform: none;
+                z-index: 0;
+                outline: none;
+                outline-offset: 0;
+                box-shadow: 10px 10px 20px rgba($black, 0.15);
+            }
         }
     }
 
     &__img {
-        height: 100%;
-        width: 100%;
+        max-width: 100%;
+        // max-height: 100%;
+        // width: 100%;
         object-fit: cover;
 
         box-shadow: 0 0 30px rgba($black, 0.5);
     }
+
+    @include mediaQuery(tab-land) {
+        & {
+            display: flex;
+            justify-content: center;
+
+            &__img-container {
+                position: static;
+            }
+        }
+
+        &__img-container--2 {
+            transform: scale(1.2) translateY(-0.25rem);
+            z-index: 1;
+        }
+
+        &__img-container--3 {
+            z-index: 0;
+        }
+    }
+
+    @media screen and (max-width: 420px){
+        &__img-container {
+            max-width: 8rem;
+        }
+    }
+
+    @include mediaQuery(tab-land) {
+        & {
+            height: 15rem;
+            padding: 5rem 0;
+        }
+        &:hover  &__img-container--1:not(:hover) {
+            transform: none;
+        }
+        &:hover  &__img-container--2:not(:hover) {
+            transform: scale(1.2) translateY(-0.25rem);
+        }
+        &:hover  &__img-container--3:not(:hover) {
+            transform: none;
+        }
+    }
+
 }
+        

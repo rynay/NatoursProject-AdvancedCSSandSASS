@@ -1,4 +1,5 @@
 .navigation {
+    z-index: 2;
     font-family: "Lato", sans-serif;
     position: relative;
 
@@ -12,22 +13,43 @@
         top: 50%;
         left: 50%;
         transform: translate(110vh, -50%);
-        z-index: 1;
+        z-index: 5;
         transition: all 0.5s cubic-bezier(1,-0.67,0,1.77);
+
+        @include mediaQuery(phone) {
+            & {
+                width: 90vw;
+            }
+        }
     }
 
     &__list {
         list-style-type: none;
         text-align: center;
+        margin: 0 auto;
 
         span {
             margin-right: 0.5em;
+        }
+
+        @include mediaQuery(phone) {
+            & {
+                max-width: 100%;
+                margin: 0 auto;
+            }
         }
     }
 
     &__list-item{
         &:not(:last-child){
             margin-bottom: 1em;
+        }
+
+        @include mediaQuery(phone) {
+            & {
+                max-width: 90%;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -64,6 +86,25 @@
         top: 4rem;
         right: 4rem;
         z-index: 1;
+
+        @include mediaQuery(tab-land) {
+            & {
+                top: 3rem;
+                right: 3rem;
+            }
+        }
+        @include mediaQuery(tab-port) {
+            & {
+                top: 2.5rem;
+                right: 2.5rem;
+            }
+        }
+        @include mediaQuery(phone) {
+            & {
+                top: 2rem;
+                right: 2rem;
+            }
+        }
     }
 
     &__background {
@@ -71,7 +112,9 @@
         width: 3.5rem;
         background: radial-gradient(circle, $light-green, $dark-green);
         border-radius: 50%;
-        transition: transform 0.5s ease;        
+        transition: transform 0.5s ease;     
+        
+        z-index: 4;
     }
 
     &__checkbox-label {
@@ -81,6 +124,13 @@
         box-shadow: 0rem 0rem 2rem rgba($black, 0.25);
         background: $main-light;
         cursor: pointer;
+
+        @include mediaQuery(tab-land) {
+            & {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
 
         position: absolute;
         top: 50%;

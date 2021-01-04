@@ -1,4 +1,7 @@
 .text {
+
+    // max-width: 100%;
+
     font-family: "Lato", sans-serif;
     &__title {
         font-weight: 700;
@@ -8,6 +11,10 @@
         line-height: 1;
 
         margin-bottom: 1em;
+
+        @include mediaQuery(tab-port) {
+            font-size: 0.9rem;
+        }
     }
     &__paragraph {
         color: $main-dark;
@@ -16,6 +23,10 @@
 
         &:not(:last-child){
             margin-bottom: 2rem;
+        }
+
+        @include mediaQuery(tab-port) {
+            font-size: 0.9rem;
         }
     }
 }

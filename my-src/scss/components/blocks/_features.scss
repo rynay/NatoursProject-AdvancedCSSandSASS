@@ -6,10 +6,11 @@
         url('../img/nat-4.jpg') top / cover no-repeat;
     
     &__container {
-        max-width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
 
         display: grid;
-        grid-template-columns: 15rem 15rem 15rem 15rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         grid-template-rows: auto;
         grid-gap: 3.5rem;
     }

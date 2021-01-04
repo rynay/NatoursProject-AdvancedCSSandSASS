@@ -1,6 +1,7 @@
 .story {
     font-family: "Lato", sans-serif;
     background: rgba($main-light, 0.7);
+    text-align: justify;
     border-radius: 3px;
     box-shadow: 3rem 3rem 10rem rgba($black, 0.15);
     transform: skewX(-12deg);
@@ -8,8 +9,21 @@
     max-width: 55rem;
     padding: 4rem 4rem 4rem 6rem;
 
+    @include mediaQuery(phone) {
+        padding: 2rem 2rem 2rem 4rem;
+
+        text-align: left;
+    }
+
     & > * {
         transform: skewX(12deg);
+    }
+
+    @include mediaQuery(tab-port) {
+        transform: skewX(0);
+        & > * {
+            transform: skewX(0);
+        }
     }
 
     &__img-container {
@@ -24,6 +38,10 @@
         overflow: hidden;
         // clip-path: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
+
+        @include mediaQuery(tab-port) {
+            transform: translateX(-2rem) skewX(0);
+        }
     }
 
     &__author {
