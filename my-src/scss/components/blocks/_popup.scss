@@ -5,9 +5,29 @@
     z-index: 2;
     top: 0;
     left: 0;
-    background: rgba($black, 0.7);
+    background: rgba($black, 0.9);
 
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+
+    &__close:link,
+    &__close:visited {
+        text-decoration: none;
+        color: $main-dark;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+
+        transition: color 0.2s;
+    }
+    &__close:hover {
+        color: $medium-green;
+    }
 
     &__container {
         background: $main-light;
@@ -19,9 +39,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(0);
 
         display: flex;
+
+        transition: all 0.3s 0.3s;
     }
 
     &__left {
@@ -38,6 +60,7 @@
     }
 
     &__right {
+        position: relative;
         flex: 2;
         padding: 4rem 3rem;
 
@@ -52,5 +75,16 @@
 
             hyphens: auto;
         }
+    }
+
+    // functionality
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__container {
+        transform: translate(-50%, -50%) scale(1);
     }
 }

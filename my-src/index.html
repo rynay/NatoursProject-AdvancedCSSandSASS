@@ -43,7 +43,7 @@
                     <span class="general-title__main">outdoors</span>
                     <span class="general-title__sub">is where life happens</span>
                 </h1>
-                <a class="btn btn--white header__btn" href="#">Discover out tours</a>
+                <a class="btn btn--white header__btn" href="#tours">Discover out tours</a>
             </div>
         </header>
 
@@ -63,7 +63,7 @@
                             <p class="text__paragraph">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam. 
                             </p>
-                            <a class="learn-more-btn about__learn-more-btn" href="#">Learn more &rarr;</a>
+                            <a class="learn-more-btn about__learn-more-btn" href="#tours">Learn more &rarr;</a>
                         </section>
 
                         <div class="image-composition about__image-composition">
@@ -119,7 +119,7 @@
             <section class="tours">
                 <div class="container">
                     <div class="u-text-center">
-                        <h2 class="title tours__title u-big-margin-bottom">Most popular tours</h2>
+                        <h2 class="title tours__title u-big-margin-bottom" id="tours">Most popular tours</h2>
                     </div>
                     <div class="tours__card-container">
                         <div class="card tours__card">
@@ -144,7 +144,7 @@
                                     <p class="card__pricing-title">Only</p>
                                     <p class="card__pricing-value">$297</p>
                                     <div class="u-text-center">
-                                        <a class="btn btn--white card__pricing-btn" href="#">Book now!</a>
+                                        <a class="btn btn--white card__pricing-btn" href="#popup">Book now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                     <p class="card__pricing-title">Only</p>
                                     <p class="card__pricing-value">$497</p>
                                     <div class="u-text-center">
-                                        <a class="btn btn--white card__pricing-btn" href="#">Book now!</a>
+                                        <a class="btn btn--white card__pricing-btn" href="#popup">Book now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                                     <p class="card__pricing-title">Only</p>
                                     <p class="card__pricing-value">$897</p>
                                     <div class="u-text-center">
-                                        <a class="btn btn--white card__pricing-btn" href="#">Book now!</a>
+                                        <a class="btn btn--white card__pricing-btn" href="#popup">Book now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +288,7 @@
             </section>
 
 
-            <section class="popup">
+            <section class="popup" id="popup">
                 <div class="popup__container">
                     <div class="popup__left">
                         <div class="popup__img-container">
@@ -300,6 +300,7 @@
                     </div>
 
                     <div class="popup__right">
+                        <a href="#tours" class="popup__close">&times;</a>
                         <h2 class="title popup__title u-small-margin-bottom">Start booking now</h2>
                         <div class="text">
                             <h3 class="text__title">Important &mdash; Please read these terms before booking</h3>
