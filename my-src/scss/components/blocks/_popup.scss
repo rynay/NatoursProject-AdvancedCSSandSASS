@@ -27,7 +27,7 @@
 
         transition: color 0.2s;
 
-        @include mediaQuery(phone) {
+        @include mediaQuery(tab-port) {
             color: #333;
             font-size: 3rem;
         }
@@ -50,7 +50,7 @@
 
         display: flex;
 
-        @include mediaQuery(phone) {
+        @include mediaQuery(tab-port) {
             & {
                 flex-direction: column;
                 justify-content: center;
@@ -63,7 +63,7 @@
     &__left {
         flex: 1;
 
-        @include mediaQuery(phone) {
+        @include mediaQuery(tab-port) {
             & {
                 display: flex;
                 align-items: stretch;
@@ -73,7 +73,7 @@
 
     &__img-container {
         height: 50%;
-        @include mediaQuery(phone) {
+        @include mediaQuery(tab-port) {
             & {
                 height: auto;
                 width: 50%;
@@ -106,7 +106,7 @@
 
             hyphens: auto;
 
-            @include mediaQuery(phone) {
+            @include mediaQuery(tab-port) {
                & {
                 font-size: 1rem;
                 column-count: unset;

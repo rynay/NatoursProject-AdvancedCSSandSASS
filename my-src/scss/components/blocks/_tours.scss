@@ -7,6 +7,10 @@
         grid-template-rows: auto;
         grid-gap: 3rem;
 
+        @include mediaQuery(tab-port) {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+
         margin-bottom: 7rem;
     }
 }
