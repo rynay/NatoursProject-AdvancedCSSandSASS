@@ -2,11 +2,21 @@
     font-family: "Lato", sans-serif;
     font-weight: 400;
 
-    background: linear-gradient(
-        to right bottom, 
-        rgba($light-green, 0.8), 
-        rgba($dark-green, 0.8)),
-        url('../img/hero.jpg') top / cover no-repeat;
+    @media screen and (min-width: 1200px),
+           screen and (min-resolution: 192dpi){
+            background: linear-gradient(
+                to right bottom, 
+                rgba($light-green, 0.8), 
+                rgba($dark-green, 0.8)),
+                url('../img/hero.jpg') top / cover no-repeat;
+           }
+    @media screen and (max-width: 1199px){
+            background: linear-gradient(
+                to right bottom, 
+                rgba($light-green, 0.8), 
+                rgba($dark-green, 0.8)),
+                url('../img/hero-small.jpg') top / cover no-repeat;
+           }
 
     position: relative;
 

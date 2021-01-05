@@ -35,7 +35,7 @@
         
         <header class="header">
             <div class="header__logo-container">
-                <img class="header__logo" src="img/logo-white.png" alt="Logo">
+                <img class="header__logo" srcset="img/logo-white.png" alt="Logo">
             </div>
 
             <div class="header__content-container">
@@ -68,13 +68,25 @@
 
                         <div class="image-composition about__image-composition">
                             <div class="image-composition__img-container image-composition__img-container--1">
-                                <img src="img/nat-1-large.jpg" alt="Nature" class="image-composition__img">
+                                <img srcset="img/nat-1.jpg 300w , img/nat-1-large.jpg 1000w"
+                                     sizes="(max-width: 75em) 15em, 300px" 
+                                     alt="Nature" 
+                                     class="image-composition__img"
+                                     src="img/nat-1-large.jpg">
                             </div>
                             <div class="image-composition__img-container image-composition__img-container--2">
-                                <img src="img/nat-2-large.jpg" alt="Nature" class="image-composition__img">
+                                <img srcset="img/nat-2.jpg 300w , img/nat-2-large.jpg 1000w"
+                                     sizes="(max-width: 75em) 15em, 300px" 
+                                     alt="Nature" 
+                                     class="image-composition__img"
+                                     src="img/nat-2-large.jpg">
                             </div>
                             <div class="image-composition__img-container image-composition__img-container--3">
-                                <img src="img/nat-3-large.jpg" alt="Nature" class="image-composition__img">
+                                <img srcset="img/nat-3.jpg 300w , img/nat-3-large.jpg 1000w"
+                                     sizes="(max-width: 75em) 15em, 300px" 
+                                     alt="Nature" 
+                                     class="image-composition__img"
+                                     src="img/nat-3-large.jpg">
                             </div>
                         </div>
                     </div>
@@ -317,7 +329,8 @@
             <div class="container">
                 <div class="u-text-center">
                     <div class="footer__logo-container">
-                        <img class="footer__logo" src="img/logo-green-2x.png" alt="#">
+                        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                        alt="#" class="footer__logo">
                     </div>
                 </div>
                 <div class="footer__content-container">
