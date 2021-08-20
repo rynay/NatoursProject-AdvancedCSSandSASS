@@ -30,7 +30,7 @@
         &--front {
             overflow: hidden;
             backface-visibility: hidden;
-            min-height: 30rem;
+            min-height: 35rem;
             width: 100%;
             border-radius: 3px;
             box-shadow: 0 1rem 40px rgba($black, 0.15);
@@ -43,7 +43,7 @@
         &--back {
             backface-visibility: hidden;
             
-            min-height: 30rem;
+            min-height: 35rem;
             
             width: 100%;
             border-radius: 3px;
